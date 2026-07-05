@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             guestAllergy: formData.get('guestAllergy') || ''
         };
 
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxeya17K_4YHAJGJ5BD7sFD554fxKyksIYHQ3khny88vK75opTRkxoa9a3txMCSemzuBw/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby_5ht8T7_LSptmQ8OW-XfkkP4sv76mWy7BC9Q3XSEcmyF8uxUTnE1sVvLfKbr7lVJHGQ/exec';
 
         try {
             const response = await fetch(GOOGLE_SCRIPT_URL, {
