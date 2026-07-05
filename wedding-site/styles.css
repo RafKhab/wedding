@@ -440,9 +440,8 @@ body {
 }
 
 .submit-btn.loading {
-    background-color: #ddd;
-    color: #666;
-    border-color: #999;
+    background-color: transparent;
+    opacity: 0.6;
     cursor: wait;
 }
 
