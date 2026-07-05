@@ -1,0 +1,575 @@
+@font-face {
+    font-family: 'Callysto';
+    src: url('assets/fonts/Callysto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NauryzRedKeds';
+    src: url('assets/fonts/NauryzRedKeds.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nyght Serif';
+    src: url('assets/fonts/NyghtSerif-Dark.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-green-main: #51662E;
+    --color-green-light: #A0AF6C;
+    --color-pink-main: #E2789C;
+    --color-pink-light: #F89AB6;
+    --color-pink-active: #FFB4CD;
+    --color-pink-dark: #973255;
+    
+    --font-serif: 'Nyght Serif', 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-cursive: 'NauryzRedKeds', 'Pacifico', cursive;
+    --font-date: 'Callysto', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-pink-main);
+    color: var(--color-green-main);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Десктопная заглушка */
+.desktop-placeholder {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--color-green-main);
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-content {
+    max-width: 600px;
+}
+
+.desktop-content h1 {
+    font-family: var(--font-serif);
+    margin-bottom: 20px;
+}
+
+.qr-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    color: var(--color-green-main);
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Мобильное приложение */
+.mobile-app {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    background-color: var(--color-pink-main);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.background-stripes {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 15px,
+        rgba(255, 255, 255, 0.4) 15px,
+        rgba(255, 255, 255, 0.4) 30px
+    );
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 5%, transparent 30%, transparent 70%, black 95%, black 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 5%, transparent 30%, transparent 70%, black 95%, black 100%);
+}
+
+@media (min-width: 481px) {
+    .desktop-placeholder {
+        display: flex;
+    }
+    .mobile-app {
+        display: none;
+    }
+}
+
+.main-container {
+    padding: 40px 10px 0 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Слой зеленого фона (SVG) */
+.green-bg-layer {
+    position: absolute;
+    top: 40px; left: -1%; right: -1%; bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.green-bg-top {
+    width: 100%; height: auto; display: block;
+    position: relative; z-index: 2;
+}
+.green-bg-middle {
+    width: 100%;
+    flex: 1;
+    background-image: url('assets/images/промежуточный.svg');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: top center;
+    position: relative; z-index: 1;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.green-bg-middle::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; right: 10%; bottom: 0;
+    background-color: var(--color-green-main);
+    z-index: -1;
+}
+.green-bg-bottom {
+    width: 100%; height: auto; display: block;
+    position: relative; z-index: 2;
+}
+
+/* Слой контента поверх фона */
+.content-layer {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+    color: white;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+/* Типографика */
+.section-title {
+    font-family: var(--font-serif);
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+/* Иллюстрации */
+.illustration-center {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.illustration-center img {
+    max-width: 150px;
+    height: auto;
+}
+.illustration-center img.party-img {
+    max-width: 250px; /* Увеличена иллюстрация party */
+}
+
+/* Секция 1: Save the Date / Главная */
+.save-the-date-section {
+    text-align: center;
+}
+.main-title-cursive {
+    font-family: var(--font-cursive);
+    font-size: clamp(20px, 10vw, 45px);
+    color: white;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: -5%;
+}
+.photo-wrapper {
+    position: relative;
+    margin: 20px auto;
+    width: 260px;
+    height: 380px;
+    padding: 10px; /* Отступ под SVG рамку */
+}
+.photo-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('assets/images/рамка фото.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 2;
+    pointer-events: none;
+}
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+.main-names {
+    margin-top: 20px;
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--color-green-light);
+}
+.divider-line {
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    margin: 20px auto;
+}
+.main-date {
+    font-family: var(--font-date);
+    font-size: 26px;
+    color: var(--color-green-light);
+}
+
+/* Секция 2: Интро и Таймер */
+.intro-text {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.timer-date {
+    font-family: var(--font-serif);
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+.timer-subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.countdown-box {
+    background-color: #d9d9d9;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--color-green-main);
+}
+.time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-item span {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
+.time-item small {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.time-separator {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Секция 3: Расписание */
+.schedule-section {
+    margin-bottom: 20px; /* Уменьшен отступ до следующей секции */
+}
+.schedule-list {
+    width: 80%;
+    margin: 30px auto;
+}
+.schedule-item {
+    display: flex;
+    margin-bottom: 25px;
+}
+.sch-time {
+    width: 80px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+}
+.sch-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.4;
+    color: white;
+}
+.schedule-footer-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Форма RSVP */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-green-light);
+    border: none;
+    border-radius: 0;
+    color: var(--color-green-main);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    outline: none;
+}
+.custom-input::placeholder {
+    color: var(--color-green-main);
+    opacity: 0.7;
+}
+.custom-input:focus,
+.custom-input.filled {
+    background-color: var(--color-pink-active);
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.presence-group .radio-btn {
+    width: 100%;
+}
+.food-pref .radio-btn,
+.drink-pref .radio-btn {
+    width: calc(50% - 5px);
+}
+
+.radio-btn input {
+    display: none;
+}
+.radio-btn span {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    background-color: var(--color-green-light);
+    color: var(--color-green-main);
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-btn input:checked + span {
+    background-color: var(--color-pink-active);
+}
+
+.hidden {
+    display: none;
+}
+
+.mt-large {
+    margin-top: 30px;
+}
+
+/* Кнопка отправки */
+.submit-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+.submit-btn {
+    background-color: transparent;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: all 0.4s ease; /* Плавный переход */
+    width: 80%;
+    max-width: 350px;
+    aspect-ratio: 522 / 139;
+    outline: none;
+    border: none;
+    background-image: url('assets/images/кнопка до.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.submit-btn:disabled, .submit-btn.incomplete {
+    color: var(--color-green-light);
+    cursor: not-allowed;
+}
+
+.submit-btn.complete {
+    background-image: url('assets/images/кнопка после заполнения.svg');
+    color: var(--color-pink-dark);
+    cursor: pointer;
+}
+
+.submit-btn.loading {
+    background-color: #ddd;
+    color: #666;
+    border-color: #999;
+    cursor: wait;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    min-height: 20px;
+}
+.form-message.error {
+    color: #ffb4cd;
+}
+
+.success-block {
+    text-align: center;
+    padding: 40px 10px 40px 30px;
+    background-color: var(--color-green-light);
+    color: var(--color-green-main);
+    border-radius: 10px;
+}
+
+/* Палитра и пожелания */
+.palette-desc, .wishes-desc {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.palette-blocks {
+    display: flex;
+    flex-direction: column;
+}
+.color-block {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Локация */
+.address-text {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.address-link {
+    color: white;
+    text-decoration: underline;
+}
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+.map-buttons {
+    display: flex;
+    gap: 10px;
+}
+.map-btn {
+    flex: 1;
+    display: inline-block;
+    padding: 15px 5px;
+    background-color: var(--color-green-light);
+    color: var(--color-green-main);
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease; /* Плавный переход */
+    border: 2px solid transparent;
+}
+
+.map-btn:hover, .map-btn:active {
+    background-color: var(--color-pink-active);
+    color: var(--color-green-main);
+}
+
+/* Контакты организатора */
+.contact-organizer {
+    margin-top: 40px;
+    text-align: center;
+}
+.organizer-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-green-light);
+    color: var(--color-green-main);
+    border-radius: 5px; /* На макете они квадратные/прямоугольные */
+    transition: all 0.3s ease;
+}
+.social-btn:hover {
+    background-color: var(--color-pink-active);
+}
+
+.footer-signatures {
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-signatures .cursive-text {
+    font-family: var(--font-cursive);
+    font-size: clamp(16px, 5.5vw, 32px);
+    color: var(--color-pink-active);
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.footer-names {
+    font-family: var(--font-serif);
+    font-size: clamp(20px, 6.5vw, 36px);
+    color: white;
+    white-space: nowrap;
+}

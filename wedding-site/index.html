@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Свадьба Гульназ и Рафаэля</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Десктопная заглушка -->
+    <div class="desktop-placeholder" id="desktop-placeholder">
+        <div class="desktop-content">
+            <h1>А-тя-тя. Пожалуйста, откройте сайт с мобильного телефона</h1>
+            <p>Мы подготовили удобную мобильную версию специально для вас!</p>
+            <div class="qr-placeholder">QR Код появится здесь</div>
+        </div>
+    </div>
+
+    <!-- Мобильная версия -->
+    <div class="mobile-app" id="mobile-app">
+        <div class="background-stripes"></div>
+        <div class="main-container">
+            <!-- Слой зеленого фона -->
+            <div class="green-bg-layer">
+                <img src="assets/images/1.svg" class="green-bg-top" alt="">
+                <div class="green-bg-middle"></div>
+                <img src="assets/images/3.svg" class="green-bg-bottom" alt="">
+            </div>
+            
+            <!-- Слой контента -->
+            <div class="content-layer">
+                
+                <!-- 1. Главный экран -->
+                <section class="section save-the-date-section">
+                    <h1 class="main-title-cursive">МЫ<br>ЖЕНИМСЯ</h1>
+                    <div class="photo-wrapper">
+                        <img src="assets/images/Raf_gu-main.png" alt="Рафаэль и Гульназ" class="main-photo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="main-names">Гульназ & Рафа<span style="font-size: 1.4em">э</span>ль</div>
+                    <div class="divider-line"></div>
+                    <div class="main-date">19.09.2026</div>
+                </section>
+
+                <!-- 2. Приглашение -->
+                <section class="section intro-section">
+                    <h2 class="section-title">Дорогие друзья,<br>родн<span style="font-size: 1.4em">ы</span>е и близкие !</h2>
+                    <p class="intro-text">
+                        Вы всегда были рядом, поддерживали и наполняли наши жизни. Мы будем счастливы, если вы разделите эту радость с нами и станете частью торжества.<br>
+                        Мы с огромным удовольствием хотим пригласить вас на нашу свадьбу.
+                    </p>
+                    <div class="illustration-center">
+                        <img src="assets/images/rings.png" alt="Кольца" onerror="this.style.display='none'">
+                    </div>
+                    
+                    <h2 class="timer-date">19.09.2026</h2>
+                    <p class="timer-subtitle">До торжества осталось</p>
+                    <div class="countdown-box" id="countdown-box">
+                        <div class="time-item"><span id="cd-days">00</span><small>Дней</small></div>
+                        <div class="time-separator">:</div>
+                        <div class="time-item"><span id="cd-hours">00</span><small>Часов</small></div>
+                        <div class="time-separator">:</div>
+                        <div class="time-item"><span id="cd-minutes">00</span><small>Минут</small></div>
+                    </div>
+                </section>
+
+                <!-- 3. Место проведения -->
+                <section class="section location-section">
+                    <h2 class="section-title">Место проведения</h2>
+                    <p class="address-text">
+                        Ресторан - Лель, Provance hall<br>
+                        Адрес : <a href="https://yandex.ru/maps/-/CDu~mQmA" target="_blank" class="address-link">Левобережная улица, 51 к1</a><br>
+                        Кировский район, Уфа, 450018
+                    </p>
+                    <div class="map-placeholder">
+                        <iframe src="https://yandex.ru/map-widget/v1/?mode=search&text=Уфа,+Левобережная+улица,+51к1&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                    <div class="map-buttons">
+                        <a href="https://goo.gl/maps/..." target="_blank" class="map-btn">Открыть Google.maps</a>
+                        <a href="https://yandex.ru/maps/-/CDu~mQmA" target="_blank" class="map-btn">Открыть Яндекс.Карты</a>
+                    </div>
+                </section>
+
+                <!-- 4. Расписание -->
+                <section class="section schedule-section">
+                    <h2 class="section-title">Расписание</h2>
+                    <div class="divider-line"></div>
+                    
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <div class="sch-time">16:00</div>
+                            <div class="sch-text">Welcome, фуршет и фотосессия</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="sch-time">16:30</div>
+                            <div class="sch-text">Выездная церемония</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="sch-time">17:30</div>
+                            <div class="sch-text">Банкет</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="sch-time">23:00</div>
+                            <div class="sch-text">Завершение вечера</div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider-line"></div>
+                    <p class="schedule-footer-text">
+                        Мы очень хотим, чтобы этот вечер стал для вас временем отдыха и праздника, поэтому просим оставить малышей в надёжных руках.
+                    </p>
+                    
+                    <div class="illustration-center">
+                        <img src="assets/images/party.png" alt="Party" class="party-img">
+                    </div>
+                </section>
+
+                <!-- 5. Палитра и Пожелания -->
+                <section class="section palette-section">
+                    <h2 class="section-title">Палитра торжества</h2>
+                    <p class="palette-desc">Будем признательны, если при выборе наряда вы отдадите предпочтение цветам нашего праздника или близким к ним оттенкам:</p>
+                    <div class="palette-blocks">
+                        <div class="color-block" style="background-color: #483529; color: #D5C7B4">483529</div>
+                        <div class="color-block" style="background-color: #D5C7B4; color: #ffffff">D5C7B4</div>
+                        <div class="color-block" style="background-color: #F5DE9B; color: #483529">F5DE9B</div>
+                        <div class="color-block" style="background-color: #B69291; color: #ffffff">B69291</div>
+                        <div class="color-block" style="background-color: #263759; color: #ffffff">263759</div>
+                        <div class="color-block" style="background-color: #112506; color: #ffffff">112506</div>
+                        <div class="color-block" style="background-color: #37060D; color: #ffffff">37060D</div>
+                    </div>
+                    
+                    <h2 class="section-title mt-large">Наши пожелания</h2>
+                    <p class="wishes-desc">Просим вас не обременять себя выбором подарков и цветов. Лучшим подарком для нас станет ваш вклад в бюджет нашей молодой семьи, который поможет воплотить наши общие мечты.</p>
+                </section>
+
+                <!-- 6. RSVP Форма -->
+                <section class="section rsvp-section">
+                    <h2 class="section-title">В<span style="font-size: 1.4em">ы</span> прид<span style="font-size: 1.4em">ё</span>те ?</h2>
+                    <form id="rsvp-form">
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Имя Фамилия" class="custom-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Присутствие</label>
+                            <div class="radio-group presence-group">
+                                <label class="radio-btn"><input type="radio" name="presence" value="Приду с радостью"><span>Приду с радостью</span></label>
+                                <label class="radio-btn"><input type="radio" name="presence" value="Приду с +1"><span>Приду с +1</span></label>
+                                <label class="radio-btn"><input type="radio" name="presence" value="К сожалению, не смогу"><span>К сожалению, не смогу</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group food-pref">
+                            <label>Предпочтения в еде</label>
+                            <div class="radio-group">
+                                <label class="radio-btn"><input type="radio" name="food" value="Ем всё"><span>Ем всё</span></label>
+                                <label class="radio-btn"><input type="radio" name="food" value="Вегетарианское"><span>Вегетарианское</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group drink-pref">
+                            <label>Предпочтения в напитках</label>
+                            <div class="radio-group drink-group">
+                                <label class="radio-btn"><input type="checkbox" name="drinks" value="Красное вино"><span>Красное вино</span></label>
+                                <label class="radio-btn"><input type="checkbox" name="drinks" value="Белое вино"><span>Белое вино</span></label>
+                                <label class="radio-btn"><input type="checkbox" name="drinks" value="Коньяк"><span>Коньяк</span></label>
+                                <label class="radio-btn"><input type="checkbox" name="drinks" value="Виски"><span>Виски</span></label>
+                                <label class="radio-btn"><input type="checkbox" name="drinks" value="Водка"><span>Водка</span></label>
+                                <label class="radio-btn"><input type="checkbox" name="drinks" value="Безалкогольное"><span>Безалкогольное</span></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Аллергия</label>
+                            <input type="text" id="allergy" name="allergy" placeholder="Напиши если есть" class="custom-input">
+                        </div>
+
+                        <!-- Дополнительные поля для +1 -->
+                        <div id="plus-one-fields" class="hidden">
+                            <div class="form-group mt-large">
+                                <label>Имя вашего +1</label>
+                                <input type="text" id="guestName" name="guestName" placeholder="Иванова Ивана" class="custom-input">
+                            </div>
+
+                            <div class="form-group food-pref">
+                                <label>Предпочтения в еде +1</label>
+                                <div class="radio-group">
+                                    <label class="radio-btn"><input type="radio" name="guestFood" value="Ем всё"><span>Ем всё</span></label>
+                                    <label class="radio-btn"><input type="radio" name="guestFood" value="Вегетарианское"><span>Вегетарианское</span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group drink-pref">
+                                <label>Предпочтения в напитках +1</label>
+                                <div class="radio-group drink-group">
+                                    <label class="radio-btn"><input type="checkbox" name="guestDrinks" value="Красное вино"><span>Красное вино</span></label>
+                                    <label class="radio-btn"><input type="checkbox" name="guestDrinks" value="Белое вино"><span>Белое вино</span></label>
+                                    <label class="radio-btn"><input type="checkbox" name="guestDrinks" value="Коньяк"><span>Коньяк</span></label>
+                                    <label class="radio-btn"><input type="checkbox" name="guestDrinks" value="Виски"><span>Виски</span></label>
+                                    <label class="radio-btn"><input type="checkbox" name="guestDrinks" value="Водка"><span>Водка</span></label>
+                                    <label class="radio-btn"><input type="checkbox" name="guestDrinks" value="Безалкогольное"><span>Безалкогольное</span></label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Аллергия +1</label>
+                                <input type="text" id="guestAllergy" name="guestAllergy" placeholder="Напиши если есть" class="custom-input">
+                            </div>
+                        </div>
+
+                        <div class="submit-wrapper">
+                            <button type="submit" id="submit-btn" class="submit-btn" disabled>
+                                Подтвердить участие
+                            </button>
+                            <div id="form-message" class="form-message"></div>
+                        </div>
+                    </form>
+                    
+                    <div id="success-message" class="hidden success-block">
+                        <h2 class="section-title">Спасибо!</h2>
+                        <p>Ваши ответы успешно отправлены. Ждем вас на нашем празднике!</p>
+                    </div>
+                </section>
+                <section class="section contact-section">
+                    <div class="contact-organizer">
+                        <p class="organizer-text">Если Вы подготовили нам творческий подарок или у Вас остались вопросы - обратитесь к организатору(Алина).</p>
+                        <div class="social-buttons">
+                            <a href="https://wa.me/79373038487" target="_blank" class="social-btn wa-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0C5.463 0 0.104 5.334 0.101 11.895C0.098 13.982 0.655 16.022 1.706 17.82L0 24L6.335 22.348C8.064 23.298 9.998 23.799 12.036 23.8H12.046C18.627 23.8 23.986 18.466 23.99 11.906C23.992 8.736 22.756 5.748 20.52 3.449ZM12.046 21.785C10.274 21.784 8.549 21.311 7.042 20.419L6.685 20.207L2.946 21.186L3.945 17.553L3.712 17.185C2.716 15.592 2.188 13.758 2.19 11.895C2.194 6.452 6.634 2.015 12.052 2.015C14.698 2.016 17.183 3.045 19.048 4.909C20.912 6.772 21.936 9.243 21.935 11.905C21.93 17.348 17.49 21.785 12.046 21.785ZM17.464 14.364C17.166 14.216 15.698 13.497 15.424 13.398C15.15 13.299 14.951 13.249 14.754 13.547C14.557 13.844 14.011 14.489 13.837 14.686C13.663 14.884 13.489 14.908 13.192 14.76C12.894 14.611 11.93 14.298 10.793 13.284C9.911 12.496 9.314 11.517 9.141 11.22C8.967 10.923 9.123 10.762 9.271 10.615C9.405 10.482 9.568 10.269 9.717 10.101C9.866 9.932 9.915 9.808 10.015 9.611C10.114 9.413 10.065 9.239 9.99 9.091C9.916 8.942 9.321 7.481 9.073 6.886C8.832 6.309 8.587 6.388 8.406 6.381C8.232 6.375 8.034 6.373 7.836 6.373C7.638 6.373 7.316 6.447 7.043 6.744C6.77 7.041 6.002 7.759 6.002 9.22C6.002 10.681 7.067 12.093 7.216 12.291C7.365 12.489 9.315 15.485 12.316 16.782C13.03 17.091 13.587 17.277 14.024 17.416C14.741 17.643 15.395 17.61 15.912 17.533C16.49 17.447 17.698 16.804 17.946 16.111C18.194 15.418 18.194 14.823 18.12 14.698C18.045 14.574 17.847 14.501 17.55 14.353" />
+                                </svg>
+                            </a>
+                            <a href="https://t.me/arinshalina" target="_blank" class="social-btn tg-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 0C5.372 0 0 5.373 0 12C0 18.628 5.372 24 12 24C18.628 24 24 18.628 24 12C24 5.373 18.628 0 12 0ZM17.64 8.136L15.657 17.502C15.511 18.156 15.118 18.318 14.567 18.005L11.554 15.786L10.101 17.184C9.939 17.345 9.805 17.479 9.489 17.479L9.704 14.398L15.343 9.308C15.588 9.088 15.289 8.966 14.963 9.183L7.994 13.567L4.998 12.631C4.346 12.428 4.334 11.979 5.133 11.666L16.85 7.151C17.391 6.945 17.868 7.279 17.64 8.136Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="section footer-section">
+                    <div class="footer-signatures">
+                        <div class="divider-line"></div>
+                        <h2 class="cursive-text">Будем рады вас видеть !</h2>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
