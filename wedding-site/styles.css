@@ -316,9 +316,10 @@ body {
 .sch-time {
     width: 80px;
     font-family: var(--font-sans);
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
     color: white;
+    font-variant-numeric: tabular-nums;
 }
 .sch-text {
     flex: 1;
@@ -507,7 +508,9 @@ body {
 }
 .map-btn {
     flex: 1;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 5px;
     background-color: var(--color-green-light);
     color: var(--color-green-main);
@@ -741,5 +744,5 @@ body {
 }
 
 .footer-section {
-    padding-bottom: 140px;
+    padding-bottom: 40px;
 }
