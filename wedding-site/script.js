@@ -235,6 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentTimeEl = document.getElementById('current-time');
     const durationTimeEl = document.getElementById('duration-time');
 
+    const audioPlayer = document.getElementById('audio-player');
+    const playerToggleBtn = document.getElementById('player-toggle-btn');
+    const playerCloseBtn = document.getElementById('player-close-btn');
+
+    if (playerToggleBtn && audioPlayer && playerCloseBtn) {
+        playerToggleBtn.addEventListener('click', () => {
+            audioPlayer.classList.remove('collapsed');
+            playerToggleBtn.classList.add('hidden');
+        });
+
+        playerCloseBtn.addEventListener('click', () => {
+            audioPlayer.classList.add('collapsed');
+            playerToggleBtn.classList.remove('hidden');
+        });
+    }
+
     if (!audio || !playPauseBtn) return; // Защита от ошибки, если плеер не найден
 
     function loadTrack(index) {

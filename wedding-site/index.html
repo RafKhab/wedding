@@ -254,8 +254,16 @@
             </div>
         </div>
 
+        <!-- Кнопка-шарик для вызова плеера -->
+        <button class="player-toggle-btn" id="player-toggle-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v9.28a4.39 4.39 0 0 0-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/></svg>
+        </button>
+
         <!-- Аудиоплеер -->
-        <div class="audio-player">
+        <div class="audio-player collapsed" id="audio-player">
+            <button class="player-close-btn" id="player-close-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
             <audio id="bg-audio"></audio>
             
             <div class="player-top">
