@@ -572,3 +572,112 @@ body {
     color: white;
     white-space: nowrap;
 }
+
+/* --- Audio Player --- */
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    background-color: #F8F1EB;
+    border-top: 1px solid var(--color-green-light);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    z-index: 100;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.player-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--color-green-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-btn {
+    background: none;
+    border: none;
+    color: var(--color-green-main);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.player-btn:hover {
+    opacity: 0.7;
+}
+
+.player-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.play-pause-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.player-progress-container,
+.player-volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    color: var(--color-green-main);
+}
+
+.player-progress-container input[type="range"],
+.player-volume-container input[type="range"] {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    height: 4px;
+    background: var(--color-green-light);
+    border-radius: 2px;
+    outline: none;
+}
+
+.player-progress-container input[type="range"]::-webkit-slider-thumb,
+.player-volume-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-green-main);
+    cursor: pointer;
+}
+
+.volume-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--color-green-main);
+}
+
+.footer-section {
+    padding-bottom: 140px;
+}
