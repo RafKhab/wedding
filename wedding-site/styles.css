@@ -94,6 +94,7 @@ body {
     background-color: var(--color-pink-main);
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding-bottom: 120px; /* Чтобы зеленый фон не доходил до конца и были видны полоски */
 }
 
 .background-stripes {
