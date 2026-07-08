@@ -341,7 +341,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Инициализация при загрузке страницы
-    audio.volume = 0.3; // Старт с 30% громкости
-    volumeBar.value = 0.3;
+    audio.volume = 0.2; // Старт с 20% громкости
+    volumeBar.value = 0.2;
     loadTrack(currentTrackIndex);
+
+    // Авто-воспроизведение при первом взаимодействии с сайтом
+    const autoPlayAudio = () => {
+        if (audio.paused) {
+            playTrack();
+        }
+        document.removeEventListener('click', autoPlayAudio);
+        document.removeEventListener('touchstart', autoPlayAudio);
+        document.removeEventListener('scroll', autoPlayAudio);
+    };
+    
+    document.addEventListener('click', autoPlayAudio);
+    document.addEventListener('touchstart', autoPlayAudio);
+    document.addEventListener('scroll', autoPlayAudio, { once: true });
 });
